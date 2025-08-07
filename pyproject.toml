@@ -1,0 +1,15 @@
+[project]
+name = "deep-research-ai-agent"
+version = "0.1.0"
+description = "An AI agent designed for deep research tasks."
+authors = [{ name = "Mike Charles", email = "serverlessmike@gmail.com" }]
+requires-python = ">=3.12"
+
+# Runtime dependencies here
+dependencies = [
+    "openai",
+    "gradio",
+    "python-dotenv",
+    "sendgrid",
+    "pydantic"
+]
