@@ -22,6 +22,6 @@ class ReportData(BaseModel):
 writer_agent = Agent(
     name="WriterAgent",
     instructions=INSTRUCTIONS,
-    model="gpt-4o-mini",
+    model="gpt-5",
     output_type=ReportData,
 )
