@@ -8,10 +8,16 @@ INSTRUCTIONS = (
     "essence and ignore any fluff. Do not include any additional commentary other than the summary itself."
 )
 
+model = "gpt-5"
+if model == "gpt-5":
+    tools=["auto"]
+else:
+    tools=[WebSearchTool(search_context_size="low")]
+
 search_agent = Agent(
-    name="Search agent",
-    instructions=INSTRUCTIONS,
-    tools=[WebSearchTool(search_context_size="low")],
-    model="gpt-5",
-    model_settings=ModelSettings(tool_choice="required"),
+    name = "Search agent",
+    instructions = INSTRUCTIONS,
+    tools = tools,
+    model = model,
+    model_settings = ModelSettings(tool_choice="required"),
 )
