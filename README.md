@@ -1,2 +1,0 @@
-# researcher
-Researcher Agent
