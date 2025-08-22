@@ -12,5 +12,6 @@ dependencies = [
     "gradio",
     "python-dotenv",
     "sendgrid",
-    "pydantic"
+    "pydantic",
+    "certifi>=2025.8.3",
 ]

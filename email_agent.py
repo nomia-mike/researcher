@@ -1,10 +1,15 @@
 import os
+import certifi
 from typing import Dict
 
 import sendgrid
 from sendgrid.helpers.mail import Email, Mail, Content, To
 from agents import Agent, function_tool
 from constants import FROM_EMAIL, TO_EMAIL
+
+# Make urllib/requests use certifi's CA bundle
+os.environ.setdefault("SSL_CERT_FILE", certifi.where())
+os.environ.setdefault("REQUESTS_CA_BUNDLE", certifi.where())
 
 @function_tool
 def send_email(subject: str, html_body: str) -> Dict[str, str]:
