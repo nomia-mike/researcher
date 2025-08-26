@@ -1,3 +1,9 @@
+"""
+planner_agent
+This code defines a little AI “planner” agent whose job is to 
+take a user’s query and decide on good web searches that should be performed to answer it. 
+Each search has to include both the search term and a short explanation of why it’s useful.
+"""
 from pydantic import BaseModel, Field
 from agents import Agent
 

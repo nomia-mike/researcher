@@ -1,10 +1,17 @@
-from agents import Runner, trace, gen_trace_id
-from search_agent import search_agent
-from planner_agent import planner_agent, WebSearchItem, WebSearchPlan
-from writer_agent import writer_agent, ReportData
-from email_agent import email_agent
-from constants import FROM_EMAIL, TO_EMAIL
+"""
+research_manager
+Defines the ResearchManager class
+This is turn defines all of the async functions
+"""
 import asyncio
+
+from agents import Runner, gen_trace_id, trace
+from constants import FROM_EMAIL, TO_EMAIL
+from email_agent import email_agent
+from planner_agent import WebSearchItem, WebSearchPlan, planner_agent
+from search_agent import search_agent
+from writer_agent import ReportData, writer_agent
+
 
 class ResearchManager:
 

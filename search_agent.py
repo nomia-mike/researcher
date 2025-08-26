@@ -1,3 +1,13 @@
+"""
+search_agent
+This code creates an AI “search agent” whose job is:
+    - Take a search term
+    - Perform a web search
+Write a short 2–3 paragraph summary (under 300 words) that captures the key points without fluff.
+The agent is built to always use a search tool when answering, but if GPT-5 is the model, 
+it just lets GPT-5 decide automatically how to use the tool.
+"""
+
 from agents import Agent, WebSearchTool, ModelSettings
 
 INSTRUCTIONS = (

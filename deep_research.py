@@ -1,13 +1,25 @@
+"""
+deep_research
+Launches a gradio UI using their new Blocks API
+"""
 import os
-import gradio as gr
-from dotenv import load_dotenv
 import threading
 import time
+
+import gradio as gr
+from dotenv import load_dotenv
+
 from research_manager import ResearchManager
+
 
 load_dotenv(override=True)
 
 async def run(query: str):
+    """
+    It creates a simple asynchronous streaming interface that 
+    forwards chunks of research results from ResearchManager.run(query) 
+    to the caller.
+    """
     async for chunk in ResearchManager().run(query):
         yield chunk
 
