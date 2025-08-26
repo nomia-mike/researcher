@@ -5,12 +5,12 @@ The sender and adressee are picked up from constants.py
 """
 # Standard libraries
 import os
-import certifi
 from typing import Dict
-# 3rd part libraries
-import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+# 3rd part libraries
+import smtplib
+import certifi
 from agents import Agent, function_tool
 # Local libraries
 from constants import FROM_EMAIL, TO_EMAIL
