@@ -1,3 +1,13 @@
+"""
+writer_agent
+This code defines a “Writer Agent” — 
+an AI researcher whose job is to take a research query and some background notes, then produce:
+ - A short summary of findings,
+ - A long, detailed report (Markdown, 1000+ words),
+ - A list of follow-up research questions.
+The Pydantic model ensures the AI always returns these three things in a structured way.
+"""
+
 from pydantic import BaseModel, Field
 from agents import Agent
 
