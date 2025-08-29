@@ -9,5 +9,5 @@ A web app that prompts for a topic, then provides detailed research about that t
 uv sync
 
 # Run the app
-uv run deep_researcher.py
+uv run deep_research.py
 ```
